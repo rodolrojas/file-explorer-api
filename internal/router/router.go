@@ -59,7 +59,7 @@ func SetupRoutes(app *fiber.App) {
 				"error": err.Error(),
 			})
 		}
-		return c.JSON(responses.SuccessResponse)
+		return c.JSON(responses.SuccessResponse())
 	})
 	app.Post("/createFile", func(c *fiber.Ctx) error {
 		type requestBody struct {
@@ -78,6 +78,6 @@ func SetupRoutes(app *fiber.App) {
 				"error": err.Error(),
 			})
 		}
-		return c.JSON(responses.SuccessResponse)
+		return c.JSON(responses.SuccessResponse())
 	})
 }

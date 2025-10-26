@@ -1,9 +1,5 @@
 package responses
 
-type SuccessResponseReturn struct {
-	status  string `json:"status"`
-}
-
-var SuccessResponse = SuccessResponseReturn{
-	status: "success",
+func SuccessResponse() map[string]string {
+	return map[string]string{"status": "success"}
 }
