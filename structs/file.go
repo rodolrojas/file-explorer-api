@@ -9,8 +9,8 @@ type ApiFileStruct struct {
 	Path string `json:"path"`
 	Size int64 `json:"size"`
 	Type string `json:"type"`
-	IsDir bool `json:"isDir"`
-	ModTime time.Time `json:"modTime"`
+	IsDir bool `json:"is_dir"`
+	ModTime time.Time `json:"mod_time"`
 	User string `json:"user"`
 	Group string `json:"group"`
 	Mode string `json:"mode"`
