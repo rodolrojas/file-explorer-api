@@ -1,9 +1,13 @@
 package commands
 
-import "os"
+import (
+	"api/helpers"
+	"os"
+)
 
-func MakeDir(name string) error {
-	error := os.Mkdir(name, 0755);
+func MakeDir(path string, name string) error {
+	fullPath := helpers.BuildPath(path, name)
+	error := os.Mkdir(fullPath, 0755)
 	if error != nil {
 		return error
 	}
